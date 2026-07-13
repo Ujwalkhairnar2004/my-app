@@ -45,8 +45,4 @@ jobs:
 
       - name: Run Docker container
         run: |
-          docker run -d \
-            --name nextjs-app \
-            -p 3000:3000 \
-            --restart unless-stopped \
-            tinu10/nextjs-app:latest
+          docker run -d -p 3000:3000 --name docker run tinu10/nextjs-app:latest
