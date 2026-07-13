@@ -1,7 +1,7 @@
 name: deploy nextjs app
 on:
   push:
-    branches:
+    branches: 
       - main
 jobs:
   build:
