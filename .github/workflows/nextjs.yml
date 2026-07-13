@@ -54,4 +54,5 @@ jobs:
          docker run -d \
          --name nextjs-app \
          -p 3000:3000 \
+         -e MONGODB_URI="`mongodb+srv://tinupatil102_db_user:${{secrets.MONGO_PASSWORD}}@cluster0.ll8nnhb.mongodb.net/?appName=Cluster0`;" \
          tinu10/nextjs-app:latest
