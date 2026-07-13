@@ -41,8 +41,12 @@ jobs:
 
       - name: Delete existing container
         run: |
+          docker stop nextjs-app || true        
           docker rm -f nextjs-app || true
-
+          
       - name: Run Docker container
         run: |
-          docker run -d --name nextjs-app -p 3000:3000 tinu10/nextjs-app:latest
+         docker run -d \
+         --name nextjs-app \
+         -p 3000:3000 \
+         tinu10/nextjs-app:latest
